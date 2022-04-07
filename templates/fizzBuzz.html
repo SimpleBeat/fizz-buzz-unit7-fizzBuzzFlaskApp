@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+    <style>
+        body {
+            margin: 20px;
+            padding: 10px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 14px;
+            color: rgb(20, 57, 167);
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        span {
+            color: rgb(11, 36, 110)
+        }
+    </style>
+</head>
+<body>
+    <h3>This is the FizzBuzz problem</h3>
+    <p>Here's the list of the first 100 numbers with the FizzBuzz filter:</p>
+    <div>
+    {% for answer in answers %}
+        <span>{{ answer }}, </span>
+    {% endfor %}
+        <span>and that's all!</span>
+    </div>
+
+</body>
+</html>
