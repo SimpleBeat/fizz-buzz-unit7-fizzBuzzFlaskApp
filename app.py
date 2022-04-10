@@ -1,14 +1,12 @@
 import flask
 
-
-from flask import Flask, render_template
-
-app = Flask(__name__)
+app = flask.Flask(__name__)
 
 @app.route("/")
-def start():
+@app.route("/fizzbuzz/<int:max_number>")
+def start(max_number=20):
     answers = []
-    for n in range(1, 101):
+    for n in range(1, max_number+1):
         s = ""
         if n % 3 == 0:
             s = "Fizz"
@@ -17,5 +15,6 @@ def start():
         if s == "":
             s = str(n)
         answers.append(s)
+    count = len(answers)
 
-    return render_template('fizzBuzz.html', answers=answers)
+    return flask.render_template('fizzBuzz.html', answers=answers, count=count)
