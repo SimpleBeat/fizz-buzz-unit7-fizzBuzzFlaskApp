@@ -25,12 +25,13 @@
 </head>
 <body>
     <h3>This is the FizzBuzz problem</h3>
-    <p>Here's the list of the first 100 numbers with the FizzBuzz filter:</p>
+    <p>Here's the list of the first {{ count }} numbers with the FizzBuzz filter:</p>
     <div>
-    {% for answer in answers %}
-        <span>{{ answer }}, </span>
-    {% endfor %}
-        <span>and that's all!</span>
+        <ul>
+            {% for answer in answers %}
+                <li>{{ answer }}</li>
+            {% endfor %}
+        </ul>
     </div>
 
 </body>
